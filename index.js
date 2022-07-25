@@ -45,7 +45,6 @@ window.onscroll = function () {
 };
 
 
-
 feature_img = Array.from(document.querySelectorAll('.img_div'))
 featureImageModal = document.getElementsByClassName("featureImageModal")[0]
 feature_close_btn = document.getElementById("feature_close_btn")
@@ -77,14 +76,8 @@ let shutter_icon =  document.querySelector('#shutter_icon')
 let items_in_navbar = Array.from((navbar.children)).length
 navbarChild = navbar.children
 bar.addEventListener('click',()=>{
-
   disableScroll()
-  // navbar.style.height = `${items_in_navbar*6}rem`
   navbar.style.clipPath = ''
-
-  // navbar.style.borderBottomLeftRadius = '0'
-  // navbar.style.borderBottomRightRadius = '0'
-
   anime.timeline({
     targets:'#navbar li ',
     duration:300
@@ -93,20 +86,9 @@ bar.addEventListener('click',()=>{
     easing:"easeInExpo",
     delay:anime.stagger(100)
   })
-  // anime({
-  //   targets:'#navbar',
-  //   height:50*items_in_navbar
-  // })
-
 })
 
 shutter_icon.addEventListener('click',()=>{
-
-  // navbar.style.clipPath = ' polygon(80% 100%, 20% 100%, 0 0, 100% 0)'
-
-  // navbar.style.borderBottomLeftRadius = '50%'
-  // navbar.style.borderBottomRightRadius = '50%'
-
   anime.timeline({
     targets:'#navbar li ',
     duration:300
@@ -115,13 +97,6 @@ shutter_icon.addEventListener('click',()=>{
     easing:"easeOutExpo",
     delay:anime.stagger(100 , {direction:"reverse"}),
   })
-  // anime({
-  //   targets:"#navbar",
-  //   height:0,
-  //   easing:"easeOutExpo"
-  // })
-
-  // navbar.style.height = `0`
   enableScroll()
 })
 

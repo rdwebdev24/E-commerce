@@ -11,6 +11,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  background-color: #e3e6f3;
   width: 100%;
 }
 body::-webkit-scrollbar {
@@ -41,8 +42,8 @@ body::-webkit-scrollbar {
   box-shadow: 0 2px 5px #80808078;
   z-index: 999;
   position: sticky;
-  top: 0;
   left: 0;
+  transform: translateY(-200px);
   transition: all 0.3s;
 }
 
@@ -58,6 +59,7 @@ body::-webkit-scrollbar {
   transition: all 0.3s ease-in-out;
 }
 
+
 #navbar li a {
   padding: 1rem 2rem;
   text-decoration: none;
@@ -65,11 +67,15 @@ body::-webkit-scrollbar {
   transition: 0.2s ease-in;
   position: relative;
 }
+.letter{
+  position: relative;
+  letter-spacing: -5px;
+}
 
-#navbar li a:hover,
+/* #navbar li a:hover,
 #navbar li a.active {
   color: #088178;
-}
+} */
 
 #navbar li a::after {
   content: "";
@@ -85,9 +91,9 @@ body::-webkit-scrollbar {
 #navbar li a.active::after {
   width: 30%;
 }
-#navbar li a:hover::after {
+/* #navbar li a:hover::after {
   width: 30%;
-}
+} */
 
 #btn:hover {
   cursor: pointer;
@@ -231,7 +237,8 @@ body::-webkit-scrollbar {
   border-radius: 2rem;
   background: #ffff;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  animation: animate 3s linear infinite;
+  /* animation: animate 3s linear infinite; */
+  position: relative;
 }
 @keyframes animate {
   0% {
